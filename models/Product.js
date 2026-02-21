@@ -5,23 +5,16 @@ const productSchema = new mongoose.Schema({
     userName: {
         type: String,
         require:true,
-        trim: true
     },
-    email: {
-        type: String,
-        required: true,
-        unique: true
-    },
-    password: {
-        type: String,
-        required: true,
-        minlength: 6 
-    },
-    role: {
-        type: String,
-        enum: ["admin", "user"],
-        default: "user"
-    }
+   price: {
+    type: Number,
+     require:true
+   },
+   quantity: {
+    type: Number,
+         require:true
+
+   }
 }, 
 {timestamps: true});
 
